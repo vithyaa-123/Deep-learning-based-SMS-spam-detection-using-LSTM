@@ -1,6 +1,6 @@
 # ----------------------------------------------------------
 # SMS Spam Detection using LSTM
-# Author: Enapa Jeeva Sri
+# Author: Vithyaa 
 # ----------------------------------------------------------
 
 import kagglehub
