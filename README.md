@@ -3,12 +3,22 @@ This project focuses on detecting spam messages using a Deep Learning model (LST
 
 **Technologies Used**
 Python
+
 Pandas, NumPy
+
 Scikit-learn
+
 TensorFlow / Keras
+
 KaggleHub
 
 **Dataset**
-Dataset used: SMS Spam Collection Dataset
-Source: Kaggle
+Dataset used:
+
+SMS Spam Collection Dataset
+
+Source:
+
+Kaggle
+
 Automatically downloaded using kagglehub
