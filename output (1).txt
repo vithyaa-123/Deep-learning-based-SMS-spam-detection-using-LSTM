@@ -1,0 +1,75 @@
+n.debugpy-2025.14.1-win32-x64\bundled\libs\debugpy\launcher' '61073' '--' 'c:\Users\Admin\Downloads\Untitled-1.py'
+2025-10-29 23:40:01.590706: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-29 23:40:06.904359: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+📥 Downloading dataset...
+✅ Dataset downloaded at: C:\Users\Admin\.cache\kagglehub\datasets\uciml\sms-spam-collection-dataset\versions\1
+
+✅ Data Sample:
+   label                                            message
+0      0  go until jurong point crazy available only in ...
+1      0                            ok lar joking wif u oni
+2      1  free entry in 2 a wkly comp to win fa cup fina...
+3      0        u dun say so early hor u c already then say
+4      0  nah i dont think he goes to usf he lives aroun...
+
+⚖️ Class Weights: {0: np.float64(0.5773316062176166), 1: np.float64(3.7328308207705194)}
+C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\keras\src\layers\core\embedding.py:97: UserWarning: Argument `input_length` is deprecated. Just remove it.
+  warnings.warn(
+2025-10-29 23:40:11.431868: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ embedding (Embedding)                │ ?                           │     0 (unbuilt) │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ bidirectional (Bidirectional)        │ ?                           │     0 (unbuilt) │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ ?                           │     0 (unbuilt) │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ ?                           │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ ?                           │     0 (unbuilt) │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 0 (0.00 B)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 0 (0.00 B)
+
+🚀 Training model...
+Epoch 1/10
+70/70 ━━━━━━━━━━━━━━━━━━━━ 27s 261ms/step - accuracy: 0.7978 - loss: 0.4400 - val_accuracy: 0.9309 - val_loss: 0.1953
+Epoch 2/10
+70/70 ━━━━━━━━━━━━━━━━━━━━ 16s 231ms/step - accuracy: 0.9659 - loss: 0.1240 - val_accuracy: 0.9776 - val_loss: 0.0828
+Epoch 3/10
+70/70 ━━━━━━━━━━━━━━━━━━━━ 17s 245ms/step - accuracy: 0.9827 - loss: 0.0723 - val_accuracy: 0.9623 - val_loss: 0.1226
+Epoch 4/10
+70/70 ━━━━━━━━━━━━━━━━━━━━ 18s 255ms/step - accuracy: 0.9921 - loss: 0.0317 - val_accuracy: 0.9785 - val_loss: 0.0873
+35/35 ━━━━━━━━━━━━━━━━━━━━ 1s 33ms/step - accuracy: 0.9776 - loss: 0.0828
+
+✅ Test Accuracy: 0.9776
+35/35 ━━━━━━━━━━━━━━━━━━━━ 3s 57ms/step  
+
+📊 Classification Report:
+              precision    recall  f1-score   support
+
+         Ham       0.99      0.99      0.99       965
+        Spam       0.92      0.91      0.92       150
+
+    accuracy                           0.98      1115
+   macro avg       0.95      0.95      0.95      1115
+weighted avg       0.98      0.98      0.98      1115
+
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 74ms/step
+
+📩 Sample Predictions:
+Message: Congratulations! You have won a free iPhone!
+Predicted: Spam
+
+Message: Hey, are we meeting for lunch today?
+Predicted: Ham
+
+Message: Free entry in 2 a weekly competition to win FA Cup tickets!
+Predicted: Spam
+
+Message: Your order has been shipped and will arrive tomorrow.
+Predicted: Ham
